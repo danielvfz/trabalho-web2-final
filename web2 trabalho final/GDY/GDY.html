@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='GDY.CSS'>
+    <title>GDY</title>
+</head>
+<body>
+    <header>
+        <img src="imagem/LOGO GDY.svg" alt="LOGO GDY.svg">
+        <nav class="nav-bar">
+            <a href="GDY.html">Home</a>
+            <a href="#noticias">Notícias</a>
+            <a href="Assinaturas/GDY PREMIUM.html">GDY Premium</a>
+        </nav>
+        <input type="text" placeholder="Pesquisar..." class="search-bar">
+        <a href="login/login.html"><img class="user-icon" src="imagem/usuario-50.png" alt="login-icon"></a>
+        <button class="button" onclick="toggleMenu()"><img src="imagem/menu_barra.png" alt="menu"></button>
+    </header>
+
+    <div id="side-menu" class="side-menu">
+        <ul>
+            <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()"></a>
+            <li><a href="#economia" onclick="toggleMenu()">Economia</a></li>
+            <li><a href="#">Política</a></li>
+            <li><a href="#saude" onclick="toggleMenu()">Saúde</a></li>
+            <li><a href="#esporte" onclick="toggleMenu()">Esportes</a></li>
+            <li><a href="#">Cultura</a></li>
+            <li><a href="#">Tempo</a></li>
+            <li><a href="#">Tecnologia</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <div id="corpo">
+            <div class="carrossel" id='carrossel'>
+                <div class="slide active">
+                <img src="imagem/Enem.jpg" alt="Imagem 1">
+                <div class="descricao">GDY vai divulgar o gabarito extraoficial das questões e fará a correção ao vivo com professores do curso Anglo.</div>
+            </div>
+            <div class="slide">
+                <img src="imagem/priguiça.jpg" alt="Imagem 2">
+                <div class="descricao">Preguiça resgatada em rodovia faz pose para selfie.</div>
+            </div>
+            <div class="slide">
+                <img src="imagem/flamengo.jpg" alt="Imagem 3">
+                <div class="descricao">Entrada da torcida do Flamengo tem confusão e gás de pimenta.</div>
+            </div>
+
+            <div class="buttons">
+                <button onclick="prevImage()">❮</button>
+                <button onclick="nextImage()">❯</button>
+            </div>
+            </div>
+            <div class="modal" id="imageModal">
+                <div class="modal-content">
+                    <span class="close-button" onclick="closeModal()">&times;</span>
+                    <img id="modalImage" src="" alt="Imagem expandida">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                </div>
+            </div>
+            <div class="noticias" id="noticias">
+                <div id="economia" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/pix-e-caixa.jpg', 'Banco Central comunica vazamento de dados de clientes da Caixa.', 'Segundo o BC, foram afetados dados cadastrais vinculados a 644 chaves Pix e não foram expostos dados sensíveis, tais como senhas ou saldos financeiros.')">
+                    <img src="imagem/pix-e-caixa.jpg" alt="caixa">
+                    <div class="noticia-txt">
+                        <h4 class="titulo">Banco Central comunica vazamento de dados de clientes da Caixa.</h>
+                    </div>
+                </div>
+                <div id="noticia-2" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/trump.jpg', 'Vitória de Trump pode ser gatilho de guerra comercial global?', 'Trump prometeu impor tarifas sobre todos os produtos estrangeiros. Se ele for adiante, muitas economias menores podem ser forçadas a responder da mesma forma.')">
+                    <img src="imagem/trump.jpg" alt="Trump">
+                    <div class="noticia-txt">
+                        <h4 class="titulo">Vitória de Trump pode ser gatilho de guerra comercial global?</h>
+                    </div>
+                </div>
+                <div id="noticia-3" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/Eris.jpg', 'Quem foi Ibrahim Eris, um dos pais do Plano Collor que morreu aos 80 anos?', 'Economista e ex-presidente do Banco Central, Eris nasceu na Turquia e veio para o Brasil em 1973.')">
+                    <img src="imagem/Eris.jpg" alt="Eris">
+                    <div class="noticia-txt">
+                        <h4 class="titulo">Quem foi Ibrahim Eris, um dos pais do Plano Collor que morreu aos 80 anos?</h>
+                    </div>
+                </div>
+                <div id="saude" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/mounjaro.jpg', 'Mounjaro: uso de remédio rival do Ozempic é ligado a morte de enfermeira britânica', 'Susan McGowan, de 58 anos, morreu duas semanas depois de tomar o medicamento para perder peso na Escócia..')">
+                    <img src="imagem/mounjaro.jpg" alt="mounjaro">
+                    <div class="noticia-txt">
+                        <h4 class="titulo">Mounjaro: uso de remédio rival do Ozempic é ligado a morte de enfermeira britânica</h>
+                    </div>
+               </div>
+                <div id="noticia-5" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/Fluoreto-agua.jpg', 'Fluoreto na água, dentifrícios e sal é proteção ou veneno?', 'Adotados na prevenção de cáries e até louvados como maior invenção de saúde do século 20, fluoretos viraram mais um fator de polarização política nos EUA.')">
+                    <img src="imagem/Fluoreto-agua.jpg" alt="Fluoreto na agua">
+                    <div class="noticia-txt">
+                        <h4 class="titulo">Fluoreto na água, dentifrícios e sal é proteção ou veneno?</h>
+                    </div>
+                </div>
+                <div id="noticia-6" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/postura.jpg', 'Postura correta na academia: veja como os exercícios devem ser feitos para não prejudicar a coluna.', 'A dor na coluna é a principal queixa em consultórios médicos depois de gripe. O excesso de peso e a postura errada podem levar a lesões graves.')">
+                <img src="imagem/postura.jpg" alt="postura">
+                <div class="noticia-txt">
+                    <h4 class="titulo">Postura correta na academia: veja como os exercícios devem ser feitos para não prejudicar a coluna.</h>
+                </div>
+               </div>
+            </div>
+            <div class="noticias-line">
+                    <div id="esporte" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/corinthias.jpg', 'Análise: Corinthians embala, vê Z-4 cada vez mais longe e pode sonhar mais alto no Brasileirão', 'Timão engata quatro vitórias seguidas, mina risco de queda e entra de vez na briga por uma vaga em torneio continental em 2025 depois de vencer rival direto por posição na tabela.')">
+                        <table>
+                            <tr>
+                                <th>
+                                    <img src="imagem/corinthias.jpg" alt="corinthians">
+                                </th>
+                                <th>
+                                    <div class="texto-lado">
+                                        <h4 class="titulo-line">Análise: Corinthians embala, vê Z-4 cada vez mais longe e pode sonhar mais alto no Brasileirão</h>
+                                    </div>
+                                </th>
+                            </tr>
+                        </table>
+                        </div>
+                <div id="noticia-8" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/copa-brasil.jpg', 'Atlético-MG x Flamengo: onde assistir ao vivo, horário e escalações da final da Copa do Brasil', 'Atlético-MG e Flamengo vão escrever mais uma página da histórica rivalidade neste domingo, às 16h (de Brasília), na Arena MRV, em Belo Horizonte. Depois de decidir o Campeonato Brasileiro de 1980 e a Supercopa de 2022, os dois times se enfrentam na finalíssima da edição 2024 da Copa do Brasil, com transmissão da Globo, do sportv e do Premiere para todo o país..')">
+                    <table>
+                        <tr>
+                            <th>
+                                <img src="imagem/copa-brasil.jpg" alt="gato 8">
+                            </th>
+                            <th>
+                                <div class="texto-lado">
+                                    <h4 class="titulo-line">Atlético-MG x Flamengo: onde assistir ao vivo, horário e escalações da final da Copa do Brasil</h>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+                <div id="noticia-9" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/bota-fogo.jpg', 'Botafogo segue favorito com 66% de chances de título do Brasileirão, e Palmeiras sobe para 28%', 'O Palmeiras se reencontrou com a vitória ao vencer o Grêmio, em casa, na 33ª rodada do Campeonato Brasileiro, após dois resultados decepcionantes em sequência: empate diante do Fortaleza (31ª) e derrota no Dérbi para o Corinthians(32ª). Com isso, melhorou suas chances de título de 17,64% para 28,45% e está apenas quatro pontos atrás do Botafogo..')">
+                    <table>
+                        <tr>
+                            <th>
+                                <img src="imagem/bota-fogo.jpg" alt="gato 9">
+                            </th>
+                            <th>
+                                <div class="texto-lado">
+                                    <h4 class="titulo-line">Botafogo segue favorito com 66% de chances de título do Brasileirão, e Palmeiras sobe para 28%</h>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+	    <div class="rodape">
+			<table>
+				<tr>
+					<th>
+						<div class="rodape_col" id="menu-footer">
+							<h5>Menu</h5>
+							<p><a href="GDY.html">Home</a></p>
+							<p><a href="#">Notícias</a></p>
+							<p><a href="Assinaturas/GDY PREMIUM.html">GDY Premium</a></p>
+						</div>	
+					</th>
+					<th>
+						<div class="rodape_col" id="contact-info">
+							<p>Entre em contato</P> 
+							<a href="mailto:contato@gdy.com.br"><img src="imagem/email-50.png"> contato@gdy.com.br</a>
+							<p><img src="imagem/telefone-50.png"> Tel: (21) 4002-8922</p>
+						</div>					
+					</th>
+					<th>
+						<div class="rodape_col" id="social-media">
+							<h5>Aproveite para nos seguir</h5>
+							<a href="https://www.facebook.com/?locale=pt_BR" title="facebook" target="_blank"><img src="imagem/facebook-50.png" alt="facebook"></a>
+							<a href="https://x.com/?lang=pt-br" title="x" target="_blank"><img src="imagem/twitterx-50.png" alt="X"></a>
+							<a href="https://www.instagram.com/" title="instagram" target="_blank"><img src="imagem/instagram-50.png" alt="Instagram"></a>
+							<a href="https://www.youtube.com/" title="youtube" target="_blank"><img src="imagem/youtube-50.png" alt="Youtube"></a>
+						</div>					
+					</tr>
+			</table>
+		    <h6>© COPYRIGHT 2024, GDY NOTICIAS BRASIL LTDA</h6>	
+		</div>
+    </footer>
+    <script src='GDY.JS'></script>
+</body>
+</html>

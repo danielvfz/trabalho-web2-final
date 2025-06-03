@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+    background-color: gray;
+}
+
+.container {
+    text-align: center;
+    max-width: 400px;
+    padding: 20px;
+    position: absolute;
+    bottom: 150px;
+    right: 500px;
+    background-color: #175f94;
+    border-radius: 10px;
+}
+
+.back-button {
+    font-size: 24px;
+    background-color: #3a79a3;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.subtitulo {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.benefits {
+    list-style-type: none;
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: left;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.divider {
+    border-top: 1px solid #ffffff;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.plans {
+    display: flex;
+    justify-content: space-between;
+}
+
+.plan {
+    background-color: #d1d1d1;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    margin: 5px;
+}
+
+.plan h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.buy-button {
+    background-color: #175f94;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+    max-width: 300px;
+}
+
+.close-button {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    float: right;
+}
+
+.confirm-button {
+    background-color: #3a79a3;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    .container {
+        bottom: 100px;
+        left: 20px;
+        right: 20px;
+        transform: none;
+        max-width: 90%;  /* Reduz o tamanho do container */
+    }
+
+    .plans {
+        justify-content: center;  /* Centraliza os planos em telas menores */
+    }
+
+    .plan {
+        width: 45%;  /* Ajusta a largura dos planos em telas médias */
+    }
+
+    h1 {
+        font-size: 20px;  /* Ajusta o tamanho do título */
+    }
+
+    .subtitulo {
+        font-size: 16px;
+    }
+
+    .buy-button {
+        padding: 5px 8px;  /* Ajusta o tamanho do botão */
+    }
+
+    .modal-content {
+        width: 90%;  /* Modal ocupa 90% da largura em telas médias */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        bottom: 50px;
+        left: 10px;
+        right: 10px;
+    }
+
+    .plans {
+        flex-direction: column;  /* Alinha os planos em coluna */
+        align-items: center;
+    }
+
+    .plan {
+        width: 80%;  /* Ajusta a largura dos planos em telas muito pequenas */
+        margin-bottom: 10px;  /* Dá um espaçamento entre os planos */
+    }
+
+    h1 {
+        font-size: 18px;  /* Ajuste para título em dispositivos muito pequenos */
+    }
+
+    .subtitulo {
+        font-size: 14px;
+    }
+
+    .buy-button {
+        padding: 6px 12px;  /* Tamanho ajustado do botão */
+    }
+
+    .modal-content {
+        width: 95%;  /* Modal ocupa 95% da largura da tela em dispositivos móveis */
+    }
+}
