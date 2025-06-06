@@ -11,5 +11,16 @@ function logar(){
 }
 
 function sair(){
-    location.href= "http://127.0.0.1:5500/web2%20trabalho%20final/GDY/GDY.html"
+    location.href= "http://127.0.0.1:5500/GDY.html"
+}
+
+
+
+function toggleMenu(){
+    var menu = document.getElementById("side-menu");
+    if (menu.style.height === "50%") {
+        menu.style.height = "0";
+    } else {
+        menu.style.height = "50%";
+    }
 }

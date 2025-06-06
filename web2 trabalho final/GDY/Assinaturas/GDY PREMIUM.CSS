@@ -1,20 +1,130 @@
 body {
     margin: 0;
-    padding: 50px;
     box-sizing: border-box;
     font-family: Arial;
-    background-image: url("imagem/estradafundo.png");
-    background-size: 100%;
+    background-image: url("/imagem/estradafundo.png");
+    background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+
+/* Header */
+
+header {
+    background-color: #fcb773;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    height: 50px;
+    width: 70px;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.nav-bar{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    width: 5px;
+}
+
+.nav-bar a{
+    margin: 0 15px;
+    text-decoration: none;  
+    color: #FFFFFF;  
+}
+
+.search-bar{
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+.user-icon{
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+
+.button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.button img{
+    height: 30px;
+}
+
+.side-menu {
+    height: 0;
+    width: 100%;
+    text-align: center;
+    top: 15;
+    right: 0;
+    background-color:#fcb773;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 0px;
+    padding: 5px;
+}
+.side-menu ul {
+    display: flex;
+    flex-direction: space-between;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.side-menu li {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+}
+
+.side-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    display: block;
+    position: relative;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    background-color: orange; /* Cor de fundo ao passar o mouse */
+}
+
+.side-menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+
+
+
+/* Container principal */
 .container {
     max-width: 400px;
-    margin: auto;
-    background-color: #fcb773;
+    padding: 20px;
+    margin: 10px auto;
     border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .back-button {
@@ -75,6 +185,11 @@ h2 {
     justify-content: space-between;
 }
 
+.plans .plan:hover {
+    background-color: rgba(255, 165, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
 .plan {
     background-color: white;
     border-radius: 8px;
@@ -83,6 +198,7 @@ h2 {
     text-align: center;
     margin: 5px;
 }
+
 
 .plan h3 {
     font-size: 15px;
@@ -121,7 +237,7 @@ h2 {
 }
 
 .modal-content {
-    background-color: #ffffff;
+    background-color: white;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -146,6 +262,8 @@ h2 {
     cursor: pointer;
     margin-top: 10px;
 }
+
+
 
 /* Responsividade */
 

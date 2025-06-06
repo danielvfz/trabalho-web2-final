@@ -261,8 +261,7 @@ main{
 .noticias-line h4{
     padding: 0 0 0 20px;
     display: inline-block;
-    background: rgba(0, 0, 0, 0.5);
-    color: orange;
+    color: white;
 }
 
 .titulo{
@@ -273,8 +272,7 @@ main{
 }
 
 .noticias h4{
-    background: rgba(0, 0, 0, 0.5);
-    color: orange;
+    color: white;
     padding: 0px 10px 10px 3px;
 }
 
