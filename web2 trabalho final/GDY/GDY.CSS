@@ -3,18 +3,29 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: lightgray;
+    background-image: url("imagem/estradafundo.png");
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Header */
 
 header {
-    background-color: #175f94;
+    background-color: #fcb773;
     color: #FFFFFF;
     padding: 0 70px 0px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+header .logo{
+    height: 50px;
+    width: 70px;
+    padding: 15px;
+    border-radius: 20px;
 }
 
 .nav-bar{
@@ -58,14 +69,28 @@ ul{
 
 .side-menu {
     height: 0;
-    width: 200px;
-    position: fixed;
+    width: 100%;
+    text-align: center;
     top: 15;
     right: 0;
-    background-color:#175f94 ;
+    background-color:#fcb773;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 0px;
+}
+.side-menu ul {
+    display: flex;
+    flex-direction: space-between;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.side-menu li {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
 }
 
 .side-menu a {
@@ -74,11 +99,13 @@ ul{
     font-size: 15px;
     color: white;
     display: block;
+    position: relative;
+    text-align: left;
     transition: 0.3s;
 }
 
 .side-menu a:hover {
-    background-color: #175f94;
+    background-color: orange; /* Cor de fundo ao passar o mouse */
 }
 
 .side-menu .closebtn {
@@ -96,14 +123,13 @@ main{
 }
 
 #corpo{
-    padding: 15px;
-    background-color: white;
+    padding: 20px;
 }
 
 #carrossel{
 	position: relative;
     width: 100%;
-    max-width: 700px;
+    max-width: 900px;
     margin: auto;
     overflow: hidden;
 }
@@ -122,7 +148,7 @@ main{
     bottom: 10px;
     left: 130px;
     background: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: orange;
     margin: 0 50px 0 0;
     border-radius: 5px;
     font-style: italic;
@@ -161,7 +187,7 @@ main{
 }
 
 .modal-content {
-    background-color: #175f94;
+    background-color: #fcb773;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -204,11 +230,11 @@ main{
 
 .noticias{
     display: grid;
-    grid-template-columns: 250px 250px 250px;
+    grid-template-columns: 300px 300px 300px;
     justify-content:space-between ;
     width: 500px;
-    margin: 50px auto;
-    padding: 0 240px 0px 40px;
+    margin: 20px auto;
+    padding: 40px 240px 0px 40px;
     border-width: 5px;
 }
 
@@ -235,12 +261,21 @@ main{
 .noticias-line h4{
     padding: 0 0 0 20px;
     display: inline-block;
+    background: rgba(0, 0, 0, 0.5);
+    color: orange;
 }
 
 .titulo{
     font-style: italic;
     text-align:start;
     padding: 0px 10px 5px 3px;
+    
+}
+
+.noticias h4{
+    background: rgba(0, 0, 0, 0.5);
+    color: orange;
+    padding: 0px 10px 10px 3px;
 }
 
 .texto-lado{
@@ -271,7 +306,8 @@ main{
 /* Footer */
 
 footer {
-    background-color: #175f94;
+    background-color: #fcb773;
+    position: relative;
     color: #FFFFFF;
     padding: 10px 20px;
     text-align: center;
@@ -285,7 +321,6 @@ footer {
     margin-right: 10px;
     color: #FFFFFF;
     text-decoration: none;
-    align-content: center;
 }
 
 .social-media img{
@@ -301,11 +336,13 @@ footer {
 
 #contact-info a{
     color: #FFFFFF;
+    text-decoration: none
 }
 
 #menu-footer a{
     color: #fff;
     text-decoration: none;
+    display: block
 }
 
 #contact-info img{
@@ -326,32 +363,70 @@ h5, .h5 {
     font-size: 1rem;
 }
 
-rodape{
-	width: 400px;
-	height: 150px;
-	display: flex;
-}
-
 .rodape_col{
-	width: 400px;
-	height: 200px;
+    margin-left: 200px;
 }
 
-@media (max-width: 768px) {
+.rodape_col a{
+	width: 100%;
+	height: 100%;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
     header {
-        flex-direction: column;
-        padding: 10px;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px;
+        margin: auto;
     }
 
     .nav-bar {
-        flex-direction: column;
-        width: 100%;
+        flex-direction: row;
+        width: 50%;
         text-align: center;
     }
 
     .side-menu {
         width: 100%;
+        height: auto;
+    }
+
+    .noticias {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 0 20px;
+    }
+
+    .carrossel {
+        max-width: 90%;
+    }
+
+    .modal-content {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+        margin: 0, auto;
+    }
+
+    .nav-bar {
+        flex-direction: row;
+        width: 100%;
+        text-align: center;
+    }
+
+    .side-menu {
+        flex-direction: row;
+        width: 100%;
         height: 100%;
+        margin: 0,auto;
     }
 
     .noticias {
@@ -359,16 +434,27 @@ rodape{
     }
 
     .carrossel {
-        max-width: 100%;
+        max-width: 50%;
     }
 
     .modal-content {
         max-width: 90%;
     }
-}
+
+    .rodape .rodape_col {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        margin: 20px
+    }}
 
 /* Tela menor que 480px */
 @media (max-width: 480px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+    }
     .noticias-line img {
         width: 100%;
         height: auto;
@@ -396,61 +482,13 @@ rodape{
         padding: 5px;
         font-size: 14px;
     }
-}@media (max-width: 768px) {
-    /* Ajuste no layout para dispositivos menores */
-    .nav-bar {
-        flex-direction: column; /* Coloca os itens do menu em coluna */
-        align-items: center;
-    }
-
-    .noticias, .noticias-line {
-        grid-template-columns: 1fr 1fr; /* 2 colunas em telas médias */
-    }
-
-    .modal-content {
-        max-width: 90%; /* Modal ocupa 90% da tela */
-    }
-
-    .user-icon {
-        height: 25px;
-    }
-
-    #carrossel {
-        max-width: 100%; /* Carrossel ocupa toda a largura da tela */
-    }
-}
-@media (max-width: 768px) {
-    /* Ajuste no layout para dispositivos menores */
-    .nav-bar {
-        flex-direction: column; /* Coloca os itens do menu em coluna */
-        align-items: center;
-    }
-
-    .noticias, .noticias-line {
-        grid-template-columns: 1fr 1fr; /* 2 colunas em telas médias */
-    }
-
-    .modal-content {
-        max-width: 90%; /* Modal ocupa 90% da tela */
-    }
-
-    .user-icon {
-        height: 25px;
-    }
-
-    #carrossel {
-        max-width: 100%; /* Carrossel ocupa toda a largura da tela */
-    }
-}
-
-@media (max-width: 480px) {
-    /* Ajustes para dispositivos muito pequenos */
-    .nav-bar {
+   .nav-bar {
         flex-direction: column; /* Coloca os itens do menu em coluna */
     }
 
     .noticias, .noticias-line {
         grid-template-columns: 1fr; /* Uma coluna */
+        gap: 10px; /* Espaçamento entre os itens */
     }
 
     .user-icon {
@@ -459,6 +497,7 @@ rodape{
 
     .modal-content {
         max-width: 95%; /* Modal ocupa 95% da tela */
+        padding: 10px; /* Menos padding para telas pequenas */
     }
 
     .search-bar {
@@ -470,3 +509,4 @@ rodape{
         height: auto;
     }
 }
+

@@ -1,26 +1,30 @@
 body {
     margin: 0;
-    padding: 0;
+    padding: 50px;
     box-sizing: border-box;
     font-family: Arial;
-    background-color: gray;
+    background-image: url("imagem/estradafundo.png");
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .container {
-    text-align: center;
     max-width: 400px;
-    padding: 20px;
-    position: absolute;
-    bottom: 150px;
-    right: 500px;
-    background-color: #175f94;
+    margin: auto;
+    background-color: #fcb773;
     border-radius: 10px;
 }
 
 .back-button {
     font-size: 24px;
-    background-color: #3a79a3;
+    background-color: orange;
     color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
     border: none;
     border-radius: 50%;
     width: 40px;
@@ -33,12 +37,14 @@ h1 {
     font-size: 24px;
     margin-bottom: 10px;
     color: #ffffff;
+    text-align: center;
 }
 
 .subtitulo {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #ffffff;
+    color: #ffffff; 
+    text-align: center;
 }
 
 .benefits {
@@ -49,6 +55,7 @@ h1 {
     padding-left: 10px;
     margin-bottom: 20px;
     color: #ffffff;
+    text-align: center;
 }
 
 .divider {
@@ -60,6 +67,7 @@ h2 {
     font-size: 22px;
     margin-bottom: 20px;
     color: #ffffff;
+    text-align: center;
 }
 
 .plans {
@@ -68,7 +76,7 @@ h2 {
 }
 
 .plan {
-    background-color: #d1d1d1;
+    background-color: white;
     border-radius: 8px;
     padding: 10px;
     width: 100px;
@@ -91,7 +99,7 @@ h2 {
 }
 
 .buy-button {
-    background-color: #175f94;
+    background-color: orange;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -130,7 +138,7 @@ h2 {
 }
 
 .confirm-button {
-    background-color: #3a79a3;
+    background-color: orange;
     color: #ffffff;
     border: none;
     border-radius: 5px;

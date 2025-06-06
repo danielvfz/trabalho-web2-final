@@ -8,11 +8,11 @@
 </head>
 <body>
     <header>
-        <img src="imagem/LOGO GDY.svg" alt="LOGO GDY.svg">
+        <img class="logo" src="imagem\rotadosabor.png" alt="LOGO Rota do Sabor">
         <nav class="nav-bar">
             <a href="GDY.html">Home</a>
             <a href="#noticias">Notícias</a>
-            <a href="Assinaturas/GDY PREMIUM.html">GDY Premium</a>
+            <a href="Assinaturas/GDY PREMIUM.html"> Premium</a>
         </nav>
         <input type="text" placeholder="Pesquisar..." class="search-bar">
         <a href="login/login.html"><img class="user-icon" src="imagem/usuario-50.png" alt="login-icon"></a>
@@ -22,13 +22,9 @@
     <div id="side-menu" class="side-menu">
         <ul>
             <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()"></a>
-            <li><a href="#economia" onclick="toggleMenu()">Economia</a></li>
-            <li><a href="#">Política</a></li>
-            <li><a href="#saude" onclick="toggleMenu()">Saúde</a></li>
-            <li><a href="#esporte" onclick="toggleMenu()">Esportes</a></li>
-            <li><a href="#">Cultura</a></li>
-            <li><a href="#">Tempo</a></li>
-            <li><a href="#">Tecnologia</a></li>
+            <li><a href="#economia" onclick="toggleMenu()">Nacional</a></li>
+            <li><a href="#saude" onclick="toggleMenu()">Internacional</a></li>
+            <li><a href="#esporte" onclick="toggleMenu()">Novidades</a></li>
         </ul>
     </div>
 
@@ -36,16 +32,16 @@
         <div id="corpo">
             <div class="carrossel" id='carrossel'>
                 <div class="slide active">
-                <img src="imagem/Enem.jpg" alt="Imagem 1">
-                <div class="descricao">GDY vai divulgar o gabarito extraoficial das questões e fará a correção ao vivo com professores do curso Anglo.</div>
+                <img src="imagem/bar.jpg" width="100%" height="400px" alt="Imagem 1">
+                <div class="descricao">O Exímia Bar, no Itaim Bibi, em São Paulo, foi eleito um dos 10 melhores novos bares de coquetéis do mundo, segundo o Spirited Awards</div>
             </div>
             <div class="slide">
-                <img src="imagem/priguiça.jpg" alt="Imagem 2">
-                <div class="descricao">Preguiça resgatada em rodovia faz pose para selfie.</div>
+                <img src="imagem/pizza.jpg" width="100%" height="400px" alt="Imagem 2">
+                <div class="descricao">Além do passatempo de fazer pães, muitas pessoas se dedicaram a assar pizzas durante a pandemia</div>
             </div>
             <div class="slide">
-                <img src="imagem/flamengo.jpg" alt="Imagem 3">
-                <div class="descricao">Entrada da torcida do Flamengo tem confusão e gás de pimenta.</div>
+                <img src="imagem/cuiaba.jpg" width="100%" height="400px" alt="Imagem 3">
+                <div class="descricao">Os restaurantes foram eleitos por 65 jurados, entre os mais importantes jornalistas, críticos e influenciadores da cena culinária nacional</div>
             </div>
 
             <div class="buttons">
@@ -62,81 +58,81 @@
                 </div>
             </div>
             <div class="noticias" id="noticias">
-                <div id="economia" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/pix-e-caixa.jpg', 'Banco Central comunica vazamento de dados de clientes da Caixa.', 'Segundo o BC, foram afetados dados cadastrais vinculados a 644 chaves Pix e não foram expostos dados sensíveis, tais como senhas ou saldos financeiros.')">
-                    <img src="imagem/pix-e-caixa.jpg" alt="caixa">
+                <div id="economia" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/restaurante.jpg', 'Os restaurantes foram eleitos por 65 jurados, entre os mais importantes jornalistas, críticos e influenciadores da cena culinária nacional', 'Os restaurantes foram eleitos por 65 jurados, que avaliaram os estabelecimentos com base em critérios como qualidade da comida, serviço e ambiente.')">
+                    <img src="imagem/restaurante.jpg" alt="restaurante">
                     <div class="noticia-txt">
-                        <h4 class="titulo">Banco Central comunica vazamento de dados de clientes da Caixa.</h>
+                        <h4 class="titulo">Os restaurantes foram eleitos por 65 jurados, entre os mais importantes jornalistas, críticos e influenciadores da cena culinária nacional</h4>
                     </div>
                 </div>
-                <div id="noticia-2" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/trump.jpg', 'Vitória de Trump pode ser gatilho de guerra comercial global?', 'Trump prometeu impor tarifas sobre todos os produtos estrangeiros. Se ele for adiante, muitas economias menores podem ser forçadas a responder da mesma forma.')">
-                    <img src="imagem/trump.jpg" alt="Trump">
+                <div id="noticia-2" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/ranking.jpeg', 'A lista dos 100 Melhores Restaurantes do Brasil foi elaborada com a ajuda de 65 jurados. Veja quanto custa comer nos 10 mais votados', 'A lista dos 100 Melhores Restaurantes do Brasil foi elaborada com a ajuda de 65 jurados, que avaliaram os estabelecimentos com base em critérios como qualidade da comida, serviço e ambiente.')">
+                    <img src="imagem/ranking.jpeg" alt="ranking">
                     <div class="noticia-txt">
-                        <h4 class="titulo">Vitória de Trump pode ser gatilho de guerra comercial global?</h>
+                        <h4 class="titulo">A lista dos 100 Melhores Restaurantes do Brasil foi elaborada com a ajuda de 65 jurados. Veja quanto custa comer nos 10 mais votados</h4>
                     </div>
                 </div>
-                <div id="noticia-3" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/Eris.jpg', 'Quem foi Ibrahim Eris, um dos pais do Plano Collor que morreu aos 80 anos?', 'Economista e ex-presidente do Banco Central, Eris nasceu na Turquia e veio para o Brasil em 1973.')">
-                    <img src="imagem/Eris.jpg" alt="Eris">
+                <div id="noticia-3" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/michelin.jpg', 'SP e RJ têm 5 restaurantes com duas estrelas e 20 com uma estrela', 'A lista dos melhores restaurantes do Brasil foi divulgada pelo Guia Michelin, que avaliou a qualidade da comida, serviço e ambiente dos estabelecimentos.')">
+                    <img src="imagem/michelin.jpg" alt="michelin">
                     <div class="noticia-txt">
-                        <h4 class="titulo">Quem foi Ibrahim Eris, um dos pais do Plano Collor que morreu aos 80 anos?</h>
+                        <h4 class="titulo">SP e RJ têm 5 restaurantes com duas estrelas e 20 com uma estrela</h4>
                     </div>
                 </div>
-                <div id="saude" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/mounjaro.jpg', 'Mounjaro: uso de remédio rival do Ozempic é ligado a morte de enfermeira britânica', 'Susan McGowan, de 58 anos, morreu duas semanas depois de tomar o medicamento para perder peso na Escócia..')">
-                    <img src="imagem/mounjaro.jpg" alt="mounjaro">
+                <div id="saude" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/lisboa.jpg', 'Lisboa foi distinguida com o prémio de Melhor Destino Culinário da Europa nos World Culinary Awards. Há muito tempo que a capital tem vindo a ser reconhecida pela sua oferta gastronómica.', 'Lisboa, a capital de Portugal, tem sido reconhecida internacionalmente por sua rica e diversificada oferta gastronómica, atraindo turistas e amantes da culinária de todo o mundo.')">
+                    <img src="imagem/lisboa.jpg" alt="lisboa">
                     <div class="noticia-txt">
-                        <h4 class="titulo">Mounjaro: uso de remédio rival do Ozempic é ligado a morte de enfermeira britânica</h>
+                        <h4 class="titulo">Lisboa foi distinguida com o prémio de Melhor Destino Culinário da Europa nos World Culinary Awards. Há muito tempo que a capital tem vindo a ser reconhecida pela sua oferta gastronómica.</h4>
                     </div>
                </div>
-                <div id="noticia-5" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/Fluoreto-agua.jpg', 'Fluoreto na água, dentifrícios e sal é proteção ou veneno?', 'Adotados na prevenção de cáries e até louvados como maior invenção de saúde do século 20, fluoretos viraram mais um fator de polarização política nos EUA.')">
-                    <img src="imagem/Fluoreto-agua.jpg" alt="Fluoreto na agua">
+                <div id="noticia-5" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/azerbaijao.jpg', 'Sabores do Azerbaijão: passeios de Slow Food no norte do Azerbaijão', 'O Azerbaijão é um país rico em tradições culinárias, e o norte do país oferece uma experiência única de Slow Food, onde os visitantes podem explorar a gastronomia local de forma autêntica.')">
+                    <img src="imagem/azerbaijao.jpg" alt="azerbaijao">
                     <div class="noticia-txt">
-                        <h4 class="titulo">Fluoreto na água, dentifrícios e sal é proteção ou veneno?</h>
+                        <h4 class="titulo">Sabores do Azerbaijão: passeios de Slow Food no norte do Azerbaijão</h4>
                     </div>
                 </div>
-                <div id="noticia-6" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/postura.jpg', 'Postura correta na academia: veja como os exercícios devem ser feitos para não prejudicar a coluna.', 'A dor na coluna é a principal queixa em consultórios médicos depois de gripe. O excesso de peso e a postura errada podem levar a lesões graves.')">
-                <img src="imagem/postura.jpg" alt="postura">
+                <div id="noticia-6" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/china.jpg', 'Fusão do antigo com o novo: tradição e modernidade na Veneza do Oriente chinesa', 'A cidade de Suzhou, na China, é conhecida por seus belos jardins e canais, que refletem a rica história e cultura do país. A cidade combina tradição e modernidade de forma única.')">
+                <img src="imagem/china.jpg" alt="china">
                 <div class="noticia-txt">
-                    <h4 class="titulo">Postura correta na academia: veja como os exercícios devem ser feitos para não prejudicar a coluna.</h>
+                    <h4 class="titulo">Fusão do antigo com o novo: tradição e modernidade na "Veneza do Oriente" chinesa</h4>
                 </div>
                </div>
             </div>
             <div class="noticias-line">
-                    <div id="esporte" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/corinthias.jpg', 'Análise: Corinthians embala, vê Z-4 cada vez mais longe e pode sonhar mais alto no Brasileirão', 'Timão engata quatro vitórias seguidas, mina risco de queda e entra de vez na briga por uma vaga em torneio continental em 2025 depois de vencer rival direto por posição na tabela.')">
+                    <div id="esporte" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/namorados.jpg', 'Dia dos Namorados 2025: 36 restaurantes em São Paulo para jantar a dois', 'O Dia dos Namorados é uma data especial para casais, e São Paulo oferece uma variedade de opções românticas para celebrar a ocasião. Confira nossa lista de 36 restaurantes que prometem tornar a noite inesquecível.')">
                         <table>
                             <tr>
                                 <th>
-                                    <img src="imagem/corinthias.jpg" alt="corinthians">
+                                    <img src="imagem/namorados.jpg" alt="Namorados">
                                 </th>
                                 <th>
                                     <div class="texto-lado">
-                                        <h4 class="titulo-line">Análise: Corinthians embala, vê Z-4 cada vez mais longe e pode sonhar mais alto no Brasileirão</h>
+                                        <h4 class="titulo-line">Dia dos Namorados 2025: 36 restaurantes em São Paulo para jantar a dois</h>
                                     </div>
                                 </th>
                             </tr>
                         </table>
                         </div>
-                <div id="noticia-8" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/copa-brasil.jpg', 'Atlético-MG x Flamengo: onde assistir ao vivo, horário e escalações da final da Copa do Brasil', 'Atlético-MG e Flamengo vão escrever mais uma página da histórica rivalidade neste domingo, às 16h (de Brasília), na Arena MRV, em Belo Horizonte. Depois de decidir o Campeonato Brasileiro de 1980 e a Supercopa de 2022, os dois times se enfrentam na finalíssima da edição 2024 da Copa do Brasil, com transmissão da Globo, do sportv e do Premiere para todo o país..')">
+                <div id="noticia-8" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/hamburguer.jpg', 'Pesquisas revelam dados de consumo, expansão do mercado e as principais tendências que moldam o futuro dos hambúrgueres no Brasil', 'O mercado de hambúrgueres no Brasil está em constante crescimento, com novas tendências surgindo a cada dia. Pesquisas recentes mostram que os consumidores estão cada vez mais interessados em opções saudáveis e sustentáveis.')">
                     <table>
                         <tr>
                             <th>
-                                <img src="imagem/copa-brasil.jpg" alt="gato 8">
+                                <img src="imagem/hamburguer.jpg" alt="Hamburguer">
                             </th>
                             <th>
                                 <div class="texto-lado">
-                                    <h4 class="titulo-line">Atlético-MG x Flamengo: onde assistir ao vivo, horário e escalações da final da Copa do Brasil</h>
+                                    <h4 class="titulo-line">Pesquisas revelam dados de consumo, expansão do mercado e as principais tendências que moldam o futuro dos hambúrgueres no Brasil</h4>
                                 </div>
                             </th>
                         </tr>
                     </table>
                 </div>
-                <div id="noticia-9" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/bota-fogo.jpg', 'Botafogo segue favorito com 66% de chances de título do Brasileirão, e Palmeiras sobe para 28%', 'O Palmeiras se reencontrou com a vitória ao vencer o Grêmio, em casa, na 33ª rodada do Campeonato Brasileiro, após dois resultados decepcionantes em sequência: empate diante do Fortaleza (31ª) e derrota no Dérbi para o Corinthians(32ª). Com isso, melhorou suas chances de título de 17,64% para 28,45% e está apenas quatro pontos atrás do Botafogo..')">
+                <div id="noticia-9" class="noticia" onmouseover="expandCard(this)" onmouseout="shrinkCard(this)" onclick="openModal('imagem/estonia.jpg', 'O que sabe sobre a comida estónia? Descubra as saborosas tradições do país báltico', 'A Estónia é um país com uma rica herança culinária, que reflete a sua história e cultura. A comida da estónia é caracterizada por ingredientes frescos e locais, como peixe, carne de porco, batatas e vegetais sazonais.')">
                     <table>
                         <tr>
                             <th>
-                                <img src="imagem/bota-fogo.jpg" alt="gato 9">
+                                <img src="imagem/estonia.jpg" alt="Estonia">
                             </th>
                             <th>
                                 <div class="texto-lado">
-                                    <h4 class="titulo-line">Botafogo segue favorito com 66% de chances de título do Brasileirão, e Palmeiras sobe para 28%</h>
+                                    <h4 class="titulo-line">O que sabe sobre a comida estónia? Descubra as saborosas tradições do país báltico</h4>
                                 </div>
                             </th>
                         </tr>
@@ -155,13 +151,13 @@
 							<h5>Menu</h5>
 							<p><a href="GDY.html">Home</a></p>
 							<p><a href="#">Notícias</a></p>
-							<p><a href="Assinaturas/GDY PREMIUM.html">GDY Premium</a></p>
+							<p><a href="Assinaturas/GDY PREMIUM.html"> Premium</a></p>
 						</div>	
 					</th>
 					<th>
 						<div class="rodape_col" id="contact-info">
 							<p>Entre em contato</P> 
-							<a href="mailto:contato@gdy.com.br"><img src="imagem/email-50.png"> contato@gdy.com.br</a>
+							<a href="mailto:contato@gdy.com.br"><img src="imagem/email-50.png"> rotadosabor@gmail.com.br</a>
 							<p><img src="imagem/telefone-50.png"> Tel: (21) 4002-8922</p>
 						</div>					
 					</th>
@@ -175,7 +171,7 @@
 						</div>					
 					</tr>
 			</table>
-		    <h6>© COPYRIGHT 2024, GDY NOTICIAS BRASIL LTDA</h6>	
+		    <h6>© COPYRIGHT 2024, NOTICIAS BRASIL LTDA</h6>	
 		</div>
     </footer>
     <script src='GDY.JS'></script>
