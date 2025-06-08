@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+
+<body>
+    <div class="caixa-login">
+        <form>
+            <h1>login</h1>
+            <div class="login">
+                <input id="user" type="text" placeholder="usuario" required>
+            </div>
+            <div class="login">
+                <input id="senha" type="password" placeholder="senha" required>
+            </div>
+
+            <div class="esqueceu-senha">
+                <label><input type="checkbox">lembrar de mim</label>
+                <p id="esqueceu">esqueceu a senha?</p>
+            </div>
+            <div class="botoes">
+                <button type="submit" class="btn" onclick="logar(); return false">continuar</button>
+            </div>
+            <div class="voltar">
+                <button class="btn" id="voltar" type="submit" onclick="sair(); return false">sair</button>
+            
+            </div>
+            <div class="registrar">
+                <p>não tem uma conta? <a href="#">resgistrar-se</a></p>
+            </div>
+        </form>
+    </div>
+    <script src='login.js'></script>
+</body>
+</html>
+
+

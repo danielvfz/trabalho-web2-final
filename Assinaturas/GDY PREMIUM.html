@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='GDY PREMIUM.CSS'>
+    <title> Rota do Sabor Premium</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="/imagem\rotadosabor.png" alt="LOGO Rota do Sabor">
+        <nav class="nav-bar">
+            <a href="/GDY.html">Home</a>
+            <a href="/GDY.html">Notícias</a>
+            <a href="#">Premium</a>
+        </nav>
+        <input type="text" placeholder="Pesquisar..." class="search-bar">
+        <a href="/login/login.html"><img class="user-icon" src="/imagem/usuario-50.png" alt="login-icon"></a>
+        <button class="button" onclick="toggleMenu()"><img src="/imagem/menu_barra.png" alt="menu"></button>
+    </header>
+
+     <div id="side-menu" class="side-menu">
+        <ul>
+            
+            <li><a href="/GDY.html" onclick="toggleMenu()">Nacional</a></li>
+            <li><a href="/GDY.html" onclick="toggleMenu()">Internacional</a></li>
+            <li><a href="/GDY.html" onclick="toggleMenu()">Novidades</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <button id="back-button" class="back-button" onclick="back()">&#8592;</button>
+        <h1> Rota do Sabor PREMIUM</h1>
+        <p class="subtitulo">Recursos do plano Premium:</p>
+        <ul class="benefits">
+            <li>Navegação sem anúncios</li>
+            <li>Acesso ao grupo de assinantes</li>
+            <li>Acesso ao podcast de notícias</li>
+            <li>Navegação ilimitada pelo site</li>
+        </ul>
+        <div class="divider"></div>
+        <h2>PLANOS:</h2>
+        <div class="plans">
+            <div class="plan" onmouseover="expandCard(this)" onmouseout="(shrinkCard(this))">
+                <h3>INDIVIDUAL</h3>
+                <p class="price">R$ 9,99</p>
+                <button class="buy-button" onclick="openPaymentModal('Individual', 'R$ 9,99')">COMPRAR</button>
+            </div>
+            <div class="plan" onmouseover="expandCard(this)" onmouseout="(shrinkCard(this))">
+                <h3>DUO</h3>
+                <p class="price">R$ 15,99</p>
+                <button class="buy-button" onclick="openPaymentModal('Duo', 'R$ 15,99')">COMPRAR</button>
+            </div>
+            <div class="plan" onmouseover="expandCard(this)" onmouseout="(shrinkCard(this))">
+                <h3>FAMÍLIA</h3>
+                <p class="price">R$ 19,99</p>
+                <button class="buy-button" onclick="openPaymentModal('Família', 'R$ 19,99')">COMPRAR</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closePaymentModal()">&times;</span>
+            <h3>Pagamento</h3>
+            <p id="planName">Plano: </p>
+            <p id="planPrice">Preço: </p>
+            <button class="confirm-button">Confirmar Pagamento</button>
+        </div>
+    </div>
+
+
+
+    <script src="GDY PREMIUM.js"></script>
+</body>
+</html>
